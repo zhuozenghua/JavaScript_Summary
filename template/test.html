@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+</head>
+<script type="text/javascript" src='stringTemplate.js'></script>
+<!-- 定义模板 -->
+<script type="text/template" id='template'>
+    <a href="{{href}}">{{text}}</a>
+</script>
+<body>
+</body>
+<script type="text/javascript">
+// 通过标签获取模版
+var templateDom = document.querySelector("#template"),
+    template = templateDom.innerHTML;
+    data = {
+         href:"http://blog.hackerwen.tech",
+         text:"我的博客"
+         }
+var resultTemplate = render(template,data);
+document.body.innerHTML = resultTemplate;
+</script>
+</html>
