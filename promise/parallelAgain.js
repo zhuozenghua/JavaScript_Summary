@@ -1,6 +1,6 @@
 /**
  * 和parallel不一样的是：总是返回resolve结果
- * 每一个promise自己处理错误
+ * 出现错误再次请求
  */
 
 const items=[
